@@ -1,26 +1,26 @@
-l<!DOCTYPE html><html>
+<!DOCTYPE html><html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Watch Online</title><style>
 body{
 background:#ffffff;
-color:#000000;
+margin:0;
+padding:20px;
 font-family:Arial,sans-serif;
 text-align:center;
-padding:20px;
-margin:0;
 }
 
 h1{
 color:#d50000;
-margin-bottom:20px;
+font-size:40px;
+margin:20px 0;
 }
 
 video{
 width:100%;
-max-width:500px;
-border-radius:10px;
+max-width:650px;
+border-radius:12px;
 }
 
 .btn{
@@ -28,19 +28,23 @@ display:none;
 background:#d50000;
 color:#ffffff;
 text-decoration:none;
-padding:15px;
+padding:16px;
 margin-top:15px;
 border-radius:10px;
 font-weight:bold;
-max-width:320px;
+font-size:18px;
+display:block;
+max-width:350px;
 margin-left:auto;
 margin-right:auto;
 }
-</style></head><body><h1>WATCH ONLINE</h1><video id="vid" width="100%" autoplay muted playsinline controls>
+</style></head><body><h1>WATCH ONLINE</h1><video id="vid" autoplay muted playsinline controls>
 <source src="VID_20260530_014503_814.mp4" type="video/mp4">
 </video><a id="fullbtn" class="btn" href="#">
 🔓 UNLOCK FULL VIDEO
 </a><script>
+document.getElementById("fullbtn").style.display="none";
+
 setTimeout(function(){
 document.getElementById("fullbtn").style.display="block";
 },4000);
