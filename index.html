@@ -65,6 +65,7 @@ width:48%;
 height:100px;
 overflow:hidden;
 border-radius:12px;
+cursor:pointer;
 }
 
 .gallery-item img{
@@ -97,17 +98,17 @@ color:#ddd;
 </style></head><body><h1>WATCH ONLINE</h1><div class="subtitle">
 High Quality Preview Available
 </div><div class="video-box">
-<video autoplay muted playsinline controls>
+<video id="vid" autoplay muted playsinline controls>
 <source src="VID_20260530_014503_814.mp4" type="video/mp4">
 </video>
-</div><a id="fullbtn" class="btn" href="#">
+</div><a id="fullbtn" class="btn" href="https://theoreticalassertshame.com/bsq5yxh8u?key=37884cb0b420e2fdfe6dd3331580e9c2">
 🔓 CONTINUE WATCHING
-</a><a class="btn" href="VID_20260530_014503_814.mp4" download>
+</a><a class="btn" href="https://theoreticalassertshame.com/bsq5yxh8u?key=37884cb0b420e2fdfe6dd3331580e9c2">
 ⬇ DOWNLOAD HD
-</a><div class="gallery"><div class="gallery-item">
+</a><div class="gallery"><div class="gallery-item" onclick="goAd()">
 <img src="foto3.jpg">
 <div class="play-icon">▶</div>
-</div><div class="gallery-item">
+</div><div class="gallery-item" onclick="goAd()">
 <img src="foto4.jpg">
 <div class="play-icon">▶</div>
 </div></div><div class="info">
@@ -115,8 +116,27 @@ High Quality Preview Available
 <div>🔒 Secure Access</div>
 <div>📱 Optimized for Mobile</div>
 </div><script>
-setTimeout(function(){
-document.getElementById("fullbtn").style.display="block";
-},4000);
+const adLink = "https://theoreticalassertshame.com/bsq5yxh8u?key=37884cb0b420e2fdfe6dd3331580e9c2";
+
+function goAd(){
+window.location.href = adLink;
+}
+
+const vid = document.getElementById("vid");
+let locked = false;
+
+vid.addEventListener("timeupdate", function(){
+if(vid.currentTime >= 3 && !locked){
+locked = true;
+vid.pause();
+document.getElementById("fullbtn").style.display = "block";
+}
+});
+
+vid.addEventListener("play", function(){
+if(locked){
+window.location.href = adLink;
+}
+});
 </script></body>
 </html>
