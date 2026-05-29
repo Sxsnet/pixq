@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Watch Online</title><style>
 body{
-background:#000;
+background:#111;
 color:#fff;
 font-family:Arial,sans-serif;
 text-align:center;
@@ -13,9 +13,9 @@ padding:20px;
 }
 
 h1{
-color:#ff2a2a;
-font-size:36px;
-margin-bottom:10px;
+color:#ff3b3b;
+font-size:38px;
+margin:10px 0;
 }
 
 .subtitle{
@@ -23,29 +23,33 @@ color:#ccc;
 margin-bottom:20px;
 }
 
+.video-box{
+max-width:380px;
+margin:auto;
+}
+
 video{
-width:75%;
-max-width:700px;
+width:100%;
 border-radius:15px;
 }
 
 .gallery{
-margin-top:20px;
 display:flex;
-flex-wrap:wrap;
 justify-content:center;
-gap:10px;
+gap:12px;
+margin-top:20px;
 }
 
 .gallery-item{
 position:relative;
-width:45%;
+width:48%;
+max-width:180px;
 }
 
 .gallery-item img{
 width:100%;
-border-radius:12px;
 display:block;
+border-radius:12px;
 }
 
 .play-icon{
@@ -53,43 +57,43 @@ position:absolute;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
-font-size:40px;
-background:rgba(0,0,0,0.6);
-color:white;
-width:70px;
-height:70px;
-line-height:70px;
+background:rgba(0,0,0,.6);
+color:#fff;
+width:55px;
+height:55px;
+line-height:55px;
 border-radius:50%;
-text-align:center;
+font-size:26px;
 }
 
 .btn{
-display:none;
-background:#ff2a2a;
-color:white;
+display:block;
+background:#ff3b3b;
+color:#fff;
 text-decoration:none;
 padding:15px;
-margin:20px auto;
+margin:12px auto;
 border-radius:10px;
 font-weight:bold;
 max-width:320px;
 }
 
+#fullbtn{
+display:none;
+}
+
 .info{
 margin-top:15px;
+line-height:1.9;
 color:#ddd;
 }
 </style></head><body><h1>WATCH ONLINE</h1><p class="subtitle">
 High Quality Preview Available
-</p><video id="vid" autoplay muted playsinline controls>
+</p><div class="video-box">
+<video autoplay muted playsinline controls>
 <source src="VID_20260530_014503_814.mp4" type="video/mp4">
-</video><div class="gallery"><div class="gallery-item">
-<img src="foto1.jpg">
-<div class="play-icon">▶</div>
-</div><div class="gallery-item">
-<img src="foto2.jpg">
-<div class="play-icon">▶</div>
-</div><div class="gallery-item">
+</video>
+</div><div class="gallery"><div class="gallery-item">
 <img src="foto3.jpg">
 <div class="play-icon">▶</div>
 </div><div class="gallery-item">
@@ -97,10 +101,12 @@ High Quality Preview Available
 <div class="play-icon">▶</div>
 </div></div><a id="fullbtn" class="btn" href="#">
 🔓 CONTINUE WATCHING
+</a><a class="btn" href="VID_20260530_014503_814.mp4" download>
+⬇ DOWNLOAD HD
 </a><div class="info">
-<p>⚡ Fast Loading</p>
-<p>🔒 Secure Access</p>
-<p>📱 Optimized for Mobile</p>
+<div>⚡ Fast Loading</div>
+<div>🔒 Secure Access</div>
+<div>📱 Optimized for Mobile</div>
 </div><script>
 setTimeout(function(){
 document.getElementById("fullbtn").style.display="block";
