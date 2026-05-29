@@ -4,47 +4,104 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Watch Online</title><style>
 body{
-background:#ffffff;
-margin:0;
-padding:20px;
+background:#000;
+color:#fff;
 font-family:Arial,sans-serif;
 text-align:center;
+margin:0;
+padding:20px;
 }
 
 h1{
-color:#d50000;
-font-size:40px;
-margin:20px 0;
+color:#ff2a2a;
+font-size:36px;
+margin-bottom:10px;
+}
+
+.subtitle{
+color:#ccc;
+margin-bottom:20px;
 }
 
 video{
+width:75%;
+max-width:700px;
+border-radius:15px;
+}
+
+.gallery{
+margin-top:20px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+}
+
+.gallery-item{
+position:relative;
+width:45%;
+}
+
+.gallery-item img{
 width:100%;
-max-width:650px;
 border-radius:12px;
+display:block;
+}
+
+.play-icon{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:40px;
+background:rgba(0,0,0,0.6);
+color:white;
+width:70px;
+height:70px;
+line-height:70px;
+border-radius:50%;
+text-align:center;
 }
 
 .btn{
 display:none;
-background:#d50000;
-color:#ffffff;
+background:#ff2a2a;
+color:white;
 text-decoration:none;
-padding:16px;
-margin-top:15px;
+padding:15px;
+margin:20px auto;
 border-radius:10px;
 font-weight:bold;
-font-size:18px;
-display:block;
-max-width:350px;
-margin-left:auto;
-margin-right:auto;
+max-width:320px;
 }
-</style></head><body><h1>WATCH ONLINE</h1><video id="vid" autoplay muted playsinline controls>
-<source src="VID_20260530_014503_814.mp4" type="video/mp4">
-</video><a id="fullbtn" class="btn" href="#">
-🔓 UNLOCK FULL VIDEO
-</a><script>
-document.getElementById("fullbtn").style.display="none";
 
+.info{
+margin-top:15px;
+color:#ddd;
+}
+</style></head><body><h1>WATCH ONLINE</h1><p class="subtitle">
+High Quality Preview Available
+</p><video id="vid" autoplay muted playsinline controls>
+<source src="VID_20260530_014503_814.mp4" type="video/mp4">
+</video><div class="gallery"><div class="gallery-item">
+<img src="foto1.jpg">
+<div class="play-icon">▶</div>
+</div><div class="gallery-item">
+<img src="foto2.jpg">
+<div class="play-icon">▶</div>
+</div><div class="gallery-item">
+<img src="foto3.jpg">
+<div class="play-icon">▶</div>
+</div><div class="gallery-item">
+<img src="foto4.jpg">
+<div class="play-icon">▶</div>
+</div></div><a id="fullbtn" class="btn" href="#">
+🔓 CONTINUE WATCHING
+</a><div class="info">
+<p>⚡ Fast Loading</p>
+<p>🔒 Secure Access</p>
+<p>📱 Optimized for Mobile</p>
+</div><script>
 setTimeout(function(){
 document.getElementById("fullbtn").style.display="block";
 },4000);
