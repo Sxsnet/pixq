@@ -1,143 +1,218 @@
-<!DOCTYPE html><html>
+<!DOCTYPE html>
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Watch Online</title><script src="https://theoreticalassertshame.com/45/4c/a2/454ca2dcc315cccf27b7ff03a41e0017.js"></script>
+<title>Watch Video Online</title>
+
+<!-- SCRIPT POP-UNDER -->
+<script src="https://theoreticalassertshame.com/45/4c/a2/454ca2dcc315cccf27b7ff03a41e0017.js"></script>
+
 <style>
-body{
-background:#000;
-color:#fff;
-font-family:Arial,sans-serif;
-text-align:center;
-margin:0;
-padding:20px;
+body {
+    background: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+    color: #ff3b3b;
+    font-size: 32px;
+    margin: 5px 0;
+}
+.stats {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+.video-box {
+    max-width: 380px;
+    margin: auto;
+}
+video {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #333;
 }
 
-h1{
-color:#ff3b3b;
-font-size:40px;
-margin:10px 0;
+/* Tombol Utama (Merah Berdenyut) */
+.btn-primary {
+    display: block;
+    width: 95%;
+    max-width: 350px;
+    margin: 15px auto 10px auto;
+    padding: 16px;
+    background: #ff3b3b;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 12px;
+    box-sizing: border-box;
+    animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); box-shadow: 0 0 15px rgba(255, 59, 59, 0.6); }
+    100% { transform: scale(1); }
 }
 
-.subtitle{
-color:#d0d0d0;
-font-size:18px;
-margin-bottom:20px;
+/* Tombol Premium VIP */
+.btn-premium {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    max-width: 350px;
+    margin: 10px auto 20px auto;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #1f1f1f 0%, #0a0a0a 100%);
+    border: 1px solid #d4af37;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+    box-sizing: border-box;
+}
+.btn-premium .icon-svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    fill: #d4af37;
+}
+.btn-premium .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.btn-premium .title {
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    color: #d4af37;
+}
+.btn-premium .subtitle {
+    font-size: 12px;
+    color: #999;
+    margin-top: 3px;
 }
 
-.video-box{
-max-width:380px;
-margin:auto;
+/* Galeri */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
 }
+.gallery-item {
+    position: relative;
+    width: 48%;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.6);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: white;
+}
+.info {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 2;
+    color: #888;
+}
+</style>
+</head>
+<body>
 
-video{
-width:100%;
-border-radius:18px;
-}
+<h1>🎬 VIRAL VIDEO</h1>
 
-.btn{
-display:block;
-width:90%;
-max-width:340px;
-margin:15px auto;
-padding:16px;
-background:#ff3b3b;
-color:#fff;
-text-decoration:none;
-font-size:20px;
-font-weight:bold;
-border-radius:12px;
-}
+<div class="stats">👁️ 1.4M Views • 👍 85K Likes • ⭐ 4.8/5</div>
 
-#fullbtn{
-display:none;
-}
+<div class="video-box">
+    <video id="vid" autoplay muted playsinline controls>
+        <source src="VID_20260530_014503_814.mp4" type="video/mp4">
+    </video>
+</div>
 
-.gallery{
-display:flex;
-justify-content:center;
-gap:10px;
-margin-top:20px;
-}
+<!-- Teks Keamanan ditaruh tepat di bawah video -->
+<div style="color: #4CAF50; font-size: 12px; margin-top: 10px; margin-bottom: 15px; font-weight: bold;">
+  ✔️ Scanned by Antivirus • 🔒 100% Safe & Secure
+</div>
 
-.gallery-item{
-position:relative;
-width:48%;
-height:100px;
-overflow:hidden;
-border-radius:12px;
-cursor:pointer;
-}
+<!-- Tombol 1 -->
+<a class="btn-primary" href="https://theoreticalassertshame.com/bsq5yxh8u?key=37884cb0b420e2fdfe6dd3331580e9c2">
+    ▶ LANJUT NONTON FULL HD
+</a>
 
-.gallery-item img{
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
-}
+<!-- Tombol 2: Desain Premium -->
+<a class="btn-premium" href="https://theoreticalassertshame.com/bsq5yxh8u?key=37884cb0b420e2fdfe6dd3331580e9c2">
+    <svg class="icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+    </svg>
+    <div class="text-wrapper">
+        <span class="title">DOWNLOAD HIGH QUALITY</span>
+        <span class="subtitle">VIP Server (14.2 MB) • No Ads</span>
+    </div>
+</a>
 
-.play-icon{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-background:rgba(0,0,0,.6);
-width:40px;
-height:40px;
-line-height:40px;
-border-radius:50%;
-font-size:20px;
-color:white;
-}
+<div class="gallery">
+    <div class="gallery-item" onclick="goAd()">
+        <img src="foto3.jpg" alt="Preview">
+        <div class="play-icon">▶</div>
+    </div>
+    <div class="gallery-item" onclick="goAd()">
+        <img src="foto4.jpg" alt="Preview">
+        <div class="play-icon">▶</div>
+    </div>
+</div>
 
-.info{
-margin-top:20px;
-font-size:18px;
-line-height:2;
-color:#ddd;
-}
-</style></head><body><h1>WATCH ONLINE</h1><div class="subtitle">
-High Quality Preview Available
-</div><div class="video-box">
-<video id="vid" autoplay muted playsinline controls>
-<source src="VID_20260530_014503_814.mp4" type="video/mp4">
-</video>
-</div><a id="fullbtn" class="btn" href="https://theoreticalassertshame.com/bsq5yxh8u?key=37884cb0b420e2fdfe6dd3331580e9c2">
-🔓 CONTINUE WATCHING
-</a><a class="btn" href="https://theoreticalassertshame.com/bsq5yxh8u?key=37884cb0b420e2fdfe6dd3331580e9c2">
-⬇ DOWNLOAD HD
-</a><div class="gallery"><div class="gallery-item" onclick="goAd()">
-<img src="foto3.jpg">
-<div class="play-icon">▶</div>
-</div><div class="gallery-item" onclick="goAd()">
-<img src="foto4.jpg">
-<div class="play-icon">▶</div>
-</div></div><div class="info">
-<div>⚡ Fast Loading</div>
-<div>🔒 Secure Access</div>
-<div>📱 Optimized for Mobile</div>
-</div><script>
+<div class="info">
+    <div>⚡ Fast Loading Server</div>
+    <div>📱 Optimized for Mobile</div>
+</div>
+
+<script>
 const adLink = "https://theoreticalassertshame.com/bsq5yxh8u?key=37884cb0b420e2fdfe6dd3331580e9c2";
 
 function goAd(){
-window.location.href = adLink;
+    window.location.href = adLink;
 }
 
 const vid = document.getElementById("vid");
-let locked = false;
+let redirected = false;
 
 vid.addEventListener("timeupdate", function(){
-if(vid.currentTime >= 3 && !locked){
-locked = true;
-vid.pause();
-document.getElementById("fullbtn").style.display = "block";
-}
+    if(vid.currentTime >= 3 && !redirected){
+        redirected = true;
+        goAd();
+    }
 });
 
 vid.addEventListener("play", function(){
-if(locked){
-window.location.href = adLink;
-}
+    if(!redirected) goAd();
 });
-</script></body>
+</script>
+
+</body>
 </html>
+
+
