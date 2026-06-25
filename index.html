@@ -5,9 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Watch Online</title>
 
-<!-- SCRIPT POPUNDER -->
-<script src="https://depthschokedirected.com/45/4c/a2/454ca2dcc315cccf27b7ff03a41e0017.js"></script>
-
 <style>
 body{ background:#000; color:#fff; font-family:Arial,sans-serif; text-align:center; margin:0; padding:20px; }
 h1{ color:#ff3b3b; font-size:40px; margin:10px 0; }
@@ -15,36 +12,16 @@ h1{ color:#ff3b3b; font-size:40px; margin:10px 0; }
 .video-box{ max-width:380px; margin:auto; position:relative; }
 video{ width:100%; border-radius:18px; display:block; }
 
-/* Durasi Palsu 1:05:22 */
 .fake-duration {
-    position: absolute;
-    bottom: 12px;
-    right: 12px;
-    background: rgba(0,0,0,0.6);
-    color: #fff;
-    padding: 3px 6px;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: bold;
-    pointer-events: none;
+    position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.6);
+    color: #fff; padding: 3px 6px; border-radius: 4px; font-size: 12px; font-weight: bold; pointer-events: none;
 }
 
 .btn-premium {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 95%;
-    max-width: 350px;
-    margin: 15px auto;
-    padding: 18px;
-    background: linear-gradient(135deg, #1f1f1f 0%, #0a0a0a 100%);
-    border: 1px solid #d4af37;
-    border-radius: 12px;
-    text-decoration: none;
-    color: #d4af37;
-    font-weight: bold;
-    font-size: 18px;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+    display: flex; align-items: center; justify-content: center; width: 95%; max-width: 350px;
+    margin: 15px auto; padding: 18px; background: linear-gradient(135deg, #1f1f1f 0%, #0a0a0a 100%);
+    border: 1px solid #d4af37; border-radius: 12px; text-decoration: none;
+    color: #d4af37; font-weight: bold; font-size: 18px; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
 }
 .icon-svg { width: 25px; height: 25px; margin-right: 10px; fill: #d4af37; }
 
@@ -61,13 +38,13 @@ video{ width:100%; border-radius:18px; display:block; }
 <div class="subtitle">High Quality Preview Available</div>
 
 <div class="video-box">
-    <video id="vid" autoplay muted playsinline>
+    <video id="vid" controls playsinline>
         <source src="VID_20260530_014503_814.mp4" type="video/mp4">
     </video>
     <div class="fake-duration">1:05:22</div>
 </div>
 
-<!-- SMARTLINK DI TOMBOL -->
+<!-- SMARTLINK 1: TOMBOL UTAMA -->
 <a class="btn-premium" href="https://depthschokedirected.com/bsq5yxh8u?key=37884cb0b420e2fdfe6dd3331580e9c2">
     <svg class="icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M8 5v14l11-7z"/>
@@ -75,9 +52,10 @@ video{ width:100%; border-radius:18px; display:block; }
     CONTINUE WATCHING
 </a>
 
+<!-- SMARTLINK 2: GALERI -->
 <div class="gallery">
-<div class="gallery-item" onclick="goAd()"><img src="foto3.jpg"><div class="play-icon">▶</div></div>
-<div class="gallery-item" onclick="goAd()"><img src="foto4.jpg"><div class="play-icon">▶</div></div>
+<div class="gallery-item" onclick="goGallery()"><img src="foto3.jpg"><div class="play-icon">▶</div></div>
+<div class="gallery-item" onclick="goGallery()"><img src="foto4.jpg"><div class="play-icon">▶</div></div>
 </div>
 
 <div class="info">
@@ -87,20 +65,11 @@ video{ width:100%; border-radius:18px; display:block; }
 </div>
 
 <script>
-// SMARTLINK UNTUK REDIRECT VIDEO DAN GALERI
-const adLink = "https://depthschokedirected.com/bsq5yxh8u?key=37884cb0b420e2fdfe6dd3331580e9c2";
-function goAd(){ window.location.href = adLink; }
-
-const vid = document.getElementById("vid");
-let redirected = false;
-
-// Redirect paksa setelah play 3 detik
-vid.addEventListener("playing", function(){
-    if(!redirected){
-        redirected = true;
-        setTimeout(goAd, 3000); 
-    }
-});
+// Link untuk tombol utama sudah langsung di HTML di atas
+// Fungsi khusus untuk galeri agar menggunakan link kedua
+function goGallery(){ 
+    window.location.href = "https://depthschokedirected.com/wyzvf47d?key=0473ec9e38168594eb580a18919cd1fc"; 
+}
 </script>
 
 </body>
