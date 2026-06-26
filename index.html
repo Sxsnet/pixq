@@ -12,7 +12,6 @@
     .video-container { max-width: 380px; margin: auto; position: relative; cursor: pointer; }
     video { width: 100%; border-radius: 10px; display: block; pointer-events: none; background: #000; }
 
-    /* Base Style untuk semua tombol play */
     .play-btn-base {
         position: absolute; top: 50%; left: 50%;
         transform: translate(-50%, -50%);
@@ -20,7 +19,6 @@
         pointer-events: none;
     }
     
-    /* Tombol Play Besar (Video) */
     .play-button { width: 80px; height: 80px; }
     .play-button:after {
         content: ''; position: absolute; left: 32px; top: 24px;
@@ -28,7 +26,6 @@
         border-color: transparent transparent transparent black;
     }
 
-    /* Tombol Play Kecil (Foto) */
     .play-icon { width: 30px; height: 30px; }
     .play-icon:after {
         content: ''; position: absolute; left: 12px; top: 8px;
@@ -36,12 +33,12 @@
         border-color: transparent transparent transparent black;
     }
 
-    /* Tombol Premium */
+    /* Tombol Premium: Latar Putih, Teks Hitam, Lonjong */
     .btn-premium { 
         display: flex; align-items: center; justify-content: center; width: 95%; max-width: 350px; 
-        margin: 20px auto; padding: 15px; background: #000; 
-        border: 1px solid white; border-radius: 8px; text-decoration: none; 
-        color: white; font-weight: bold; font-size: 16px; 
+        margin: 20px auto; padding: 15px; background: #fff !important; 
+        border: none; border-radius: 50px !important; text-decoration: none; 
+        color: #000 !important; font-weight: bold; font-size: 16px; 
     }
     
     .gallery { display:flex; justify-content:center; gap:10px; margin-top:20px; }
@@ -53,7 +50,6 @@
 
 <h1>X HOT</h1>
 
-<!-- Klik Video Utama memicu goAd1 -->
 <div class="video-container" onclick="goAd1()">
     <video playsinline>
         <source src="rus.mp4" type="video/mp4">
@@ -66,12 +62,10 @@
 </a>
 
 <div class="gallery">
-    <!-- Klik Foto 1 memicu goAd2 -->
     <div class="gallery-item" onclick="goAd2()">
         <img src="foto3.jpg">
         <div class="play-btn-base play-icon"></div>
     </div>
-    <!-- Klik Foto 2 memicu goAd3 -->
     <div class="gallery-item" onclick="goAd3()">
         <img src="foto4.jpg">
         <div class="play-btn-base play-icon"></div>
@@ -86,3 +80,4 @@
 
 </body>
 </html>
+
