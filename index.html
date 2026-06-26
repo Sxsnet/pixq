@@ -7,77 +7,81 @@
 
 <style>
     body { background:#000; color:#fff; font-family:Arial,sans-serif; text-align:center; margin:0; padding:20px; }
-    h1 { color:#fff; font-size:40px; margin:20px 0; font-weight: 900; letter-spacing: 3px; }
+    h1 { color:#fff; font-size:24px; margin:15px 0; font-weight: bold; letter-spacing: 2px; }
     
     .video-container { max-width: 380px; margin: auto; position: relative; cursor: pointer; }
-    
-    /* Video tidak bisa disentuh dan tidak jalan otomatis sesuai keinginanmu */
-    video { 
-        width: 100%; 
-        border-radius: 10px; 
-        display: block; 
-        pointer-events: none; 
-        background: #000; 
-    }
+    video { width: 100%; border-radius: 10px; display: block; pointer-events: none; background: #000; }
 
-    .play-button {
-        position: absolute;
-        top: 50%;
-        left: 50%;
+    /* Base Style untuk semua tombol play */
+    .play-btn-base {
+        position: absolute; top: 50%; left: 50%;
         transform: translate(-50%, -50%);
-        width: 70px;
-        height: 70px;
-        background: rgba(0,0,0,0.6);
-        border-radius: 50%;
+        background: white; border-radius: 50%;
         pointer-events: none;
     }
-
+    
+    /* Tombol Play Besar (Video) */
+    .play-button { width: 80px; height: 80px; }
     .play-button:after {
-        content: '';
-        position: absolute;
-        left: 28px;
-        top: 20px;
-        border-style: solid;
-        border-width: 15px 0 15px 25px;
-        border-color: transparent transparent transparent white;
+        content: ''; position: absolute; left: 32px; top: 24px;
+        border-style: solid; border-width: 16px 0 16px 28px;
+        border-color: transparent transparent transparent black;
     }
 
+    /* Tombol Play Kecil (Foto) */
+    .play-icon { width: 30px; height: 30px; }
+    .play-icon:after {
+        content: ''; position: absolute; left: 12px; top: 8px;
+        border-style: solid; border-width: 7px 0 7px 12px;
+        border-color: transparent transparent transparent black;
+    }
+
+    /* Tombol Premium */
     .btn-premium { 
         display: flex; align-items: center; justify-content: center; width: 95%; max-width: 350px; 
-        margin: 20px auto; padding: 18px; background: #fff; 
-        border-radius: 50px; text-decoration: none; 
-        color: #000; font-weight: bold; font-size: 18px; 
+        margin: 20px auto; padding: 15px; background: #000; 
+        border: 1px solid white; border-radius: 8px; text-decoration: none; 
+        color: white; font-weight: bold; font-size: 16px; 
     }
     
     .gallery { display:flex; justify-content:center; gap:10px; margin-top:20px; }
-    .gallery-item { position:relative; width:48%; height:100px; overflow:hidden; border-radius:12px; cursor:pointer; }
+    .gallery-item { position:relative; width:48%; height:100px; overflow:hidden; border-radius:10px; cursor:pointer; }
     .gallery-item img { width:100%; height:100%; object-fit:cover; display:block; }
-    .play-icon { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); background:rgba(0,0,0,.6); width:40px; height:40px; line-height:40px; border-radius:50%; font-size:20px; color:white; pointer-events: none; }
 </style>
 </head>
 <body>
 
 <h1>X HOT</h1>
 
-<div class="video-container" onclick="goAd()">
+<!-- Klik Video Utama memicu goAd1 -->
+<div class="video-container" onclick="goAd1()">
     <video playsinline>
         <source src="rus.mp4" type="video/mp4">
     </video>
-    <div class="play-button"></div>
+    <div class="play-btn-base play-button"></div>
 </div>
 
 <a class="btn-premium" href="https://depthschokedirected.com/bsq5yxh8u?key=37884cb0b420e2fdfe6dd3331580e9c2">
-    WATCH NOW
+    ACCESS FULL
 </a>
 
 <div class="gallery">
-    <div class="gallery-item" onclick="goGallery()"><img src="foto3.jpg"><div class="play-icon">▶</div></div>
-    <div class="gallery-item" onclick="goGallery()"><img src="foto4.jpg"><div class="play-icon">▶</div></div>
+    <!-- Klik Foto 1 memicu goAd2 -->
+    <div class="gallery-item" onclick="goAd2()">
+        <img src="foto3.jpg">
+        <div class="play-btn-base play-icon"></div>
+    </div>
+    <!-- Klik Foto 2 memicu goAd3 -->
+    <div class="gallery-item" onclick="goAd3()">
+        <img src="foto4.jpg">
+        <div class="play-btn-base play-icon"></div>
+    </div>
 </div>
 
 <script>
-    function goAd(){ window.location.href = "https://depthschokedirected.com/bsq5yxh8u?key=37884cb0b420e2fdfe6dd3331580e9c2"; }
-    function goGallery(){ window.location.href = "https://depthschokedirected.com/wyzvf47d?key=0473ec9e38168594eb580a18919cd1fc"; }
+    function goAd1(){ window.location.href = "https://depthschokedirected.com/bsq5yxh8u?key=37884cb0b420e2fdfe6dd3331580e9c2"; }
+    function goAd2(){ window.location.href = "https://depthschokedirected.com/bsq5yxh8u?key=37884cb0b420e2fdfe6dd3331580e9c2"; }
+    function goAd3(){ window.location.href = "https://depthschokedirected.com/wyzvf47d?key=0473ec9e38168594eb580a18919cd1fc"; }
 </script>
 
 </body>
