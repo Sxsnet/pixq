@@ -3,29 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>X Hot</title>
+<title>X HOT</title>
 <style>
     body { background:#000; color:#fff; font-family:Arial,sans-serif; text-align:center; margin:0; padding:20px; }
     h1 { color:#fff; font-size:40px; margin:20px 0; font-weight: 900; letter-spacing: 3px; }
     
-    .video-container { max-width: 380px; margin: auto; position: relative; cursor: pointer; }
-    
-    /* Video tidak bisa diputar pakai pointer-events: none */
-    .video-container video { 
-        width: 100%; 
-        border-radius: 10px; 
-        display: block; 
-        pointer-events: none; 
-    }
+    .video-container { max-width: 380px; margin: auto; position: relative; cursor: pointer; border-radius: 10px; overflow: hidden; }
+    .video-container img { width: 100%; display: block; }
 
     .play-btn {
         position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-        width: 65px; height: 65px; background: rgba(255, 255, 255, 0.9);
-        border-radius: 50%; z-index: 5; display: flex; align-items: center; justify-content: center;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        width: 65px; height: 65px; background: rgba(0, 0, 0, 0.6);
+        border-radius: 50%; border: 2px solid #fff; display: flex; 
+        align-items: center; justify-content: center; pointer-events: none;
     }
     .play-btn::after {
-        content: ''; border-left: 20px solid #000;
+        content: ''; border-left: 20px solid #fff;
         border-top: 12px solid transparent; border-bottom: 12px solid transparent;
         margin-left: 5px;
     }
@@ -39,17 +32,6 @@
     .gallery { display:flex; justify-content:center; gap:10px; margin-top:20px; }
     .gallery-item { position:relative; width:48%; height:100px; overflow:hidden; border-radius:12px; cursor:pointer; }
     .gallery-item img { width:100%; height:100%; object-fit:cover; display:block; }
-    
-    .play-icon-small {
-        position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-        width: 35px; height: 35px; background: rgba(255, 255, 255, 0.8);
-        border-radius: 50%; display: flex; align-items: center; justify-content: center;
-    }
-    .play-icon-small::after {
-        content: ''; border-left: 12px solid #000;
-        border-top: 8px solid transparent; border-bottom: 8px solid transparent;
-        margin-left: 3px;
-    }
 </style>
 </head>
 <body>
@@ -58,9 +40,7 @@
 
 <div class="video-container" onclick="goAd()">
     <div class="play-btn"></div>
-    <video playsinline poster="thumbnail_video_anda.jpg">
-        <source src="VID_20260530_014503_814.mp4" type="video/mp4">
-    </video>
+    <img src="thumbnail_anda.jpg" alt="Video">
 </div>
 
 <a class="btn-premium" href="https://depthschokedirected.com/bsq5yxh8u?key=37884cb0b420e2fdfe6dd3331580e9c2">
@@ -68,8 +48,8 @@
 </a>
 
 <div class="gallery">
-    <div class="gallery-item" onclick="goGallery()"><img src="foto3.jpg"><div class="play-icon-small"></div></div>
-    <div class="gallery-item" onclick="goGallery()"><img src="foto4.jpg"><div class="play-icon-small"></div></div>
+    <div class="gallery-item" onclick="goGallery()"><img src="foto3.jpg"></div>
+    <div class="gallery-item" onclick="goGallery()"><img src="foto4.jpg"></div>
 </div>
 
 <script>
